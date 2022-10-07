@@ -1,0 +1,36 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">New Booking</label>
+   
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        [(ngModel)]="bookingEventId"       
+        placeholder="Enter EventId">
+    </div>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        [(ngModel)]="bookingEvent"       
+        placeholder="Enter Event">
+    </div>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        [(ngModel)]="bookingUserId"       
+        placeholder="Enter UserId">
+    </div>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        [(ngModel)]="bookingTicketCatagory"       
+        placeholder="Enter Catagory">
+    </div>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" 
+        [(ngModel)]="bookingNumberofTickets"       
+        placeholder="Enter No of Tickets">
+    </div>
+   
+  
+
+</div>
+
+<button (click)="addevent()" *ngIf="events.bookingUserId==0" class="btn btn-primary">
+    Book
+</button>

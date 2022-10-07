@@ -1,0 +1,56 @@
+<button type="button" class="btn btn-primary float-right m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+    Book Event
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{ModalTitle}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="closeClick()"></button>
+        </div>
+        <div class="modal-body">
+            
+            <app-post [events]="events" *ngIf="ActivateEventsComp"></app-post>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>EventId</th>
+            <th>EventName</th>
+            <th>EventType</th>
+            <th>Location</th>
+            <th>Start</th>
+           <th>End</th>
+           
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let u of EventsList">
+            <td>{{u.eventId}}</td>
+            <td>{{u.eventName}}</td>
+            <td>{{u.eventType}}</td>
+            <td>{{u.eventLocation}}</td>
+            <td>{{u.eventStartdate}}</td>
+            <td>{{u.eventEnddate}}</td>
+           
+            
+
+        </tr>
+    </tbody>
+</table>

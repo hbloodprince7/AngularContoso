@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BookingId</th>
+            <th>EventId</th>
+            <th>Event</th>
+            <th>BookingUserId</th>
+            <th>Catagory</th>
+           <th>No Of Tickets</th>
+           
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let b of BookingsList">
+            <td>{{b.bookingId}}</td>
+            <td>{{b.bookingEventId}}</td>
+            <td>{{b.bookingEvent}}</td>
+            <td>{{b.bookingUserId}}</td>
+            <td>{{b.bookingTicketCatagory}}</td>
+            <td>{{b.bookingNumberofTickets}}</td>
+           
+            
+
+        </tr>
+    </tbody>
+</table>
